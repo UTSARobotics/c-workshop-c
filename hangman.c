@@ -3,7 +3,7 @@
 #include <time.h>
 
 #define WORDLIST "english.txt"
-// 1/100
+// 1/0x10F2C
 #define ODDS 0x10F2C
 
 void printBoard(char *word, int *mask, int wlen, int fails) {
@@ -15,7 +15,6 @@ void printBoard(char *word, int *mask, int wlen, int fails) {
       "|        \n"   /* |      /\ */
       "|        \n"   // |
   };
-
   char board1[] = {
       "\n+-------+\n" // +-------+
       "|       |\n"   // |       |
@@ -48,14 +47,6 @@ void printBoard(char *word, int *mask, int wlen, int fails) {
       "|        \n"   /* |      /\ */
       "|        \n"   // |
   };
-  // char board5[] = {
-  //     "\n+-------+\n" // +-------+
-  //     "|       |\n"   // |       |
-  //     "|       O\n"   // |       O
-  //     "|      /|\\\n" /* |      /|\ */
-  //     "|        \n"   /* |      /\ */
-  //     "|        \n"   // |
-  // };
   char board5[] = {
       "\n+-------+\n" // +-------+
       "|       |\n"   // |       |
@@ -96,13 +87,7 @@ void printBoard(char *word, int *mask, int wlen, int fails) {
     printf("%s", board6);
     printf("\nYou Lose\nThe correct word was %s\n", word);
     exit(0);
-
     break;
-  // case 7:
-  //   printf("%s", board7);
-  //   printf("\nYou Lose\nThe correct word was %s\n", word);
-  //   exit(0);
-  //   break;
   default:
     printf("This is probably an error\n");
     exit(1);
